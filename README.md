@@ -1,5 +1,8 @@
 # Angular 4 international phone prefix input
 
+## Note !
+This is a fork of kondi0/ng4-intl-phone.
+
 ## Description
 This is a simple library with international phone prefix with flags images.
 
@@ -7,14 +10,14 @@ This is a simple library with international phone prefix with flags images.
 
 To install this component to an external project, follow the procedure:
 
-1. __npm install ng4-intl-phone --save__
+1. __npm install ng4-country-phone-select --save__
 
 2. Add __InternationalPhoneModule__ import to your __@NgModule__ like example below
     ```ts
     import { NgModule } from '@angular/core';
     import { BrowserModule } from '@angular/platform-browser';
     import { MyTestApp } from './my-test-app';
-    import { InternationalPhoneModule } from 'ng4-intl-phone';
+    import { InternationalPhoneModule } from 'ng4-country-phone-select';
 
     @NgModule({
         imports:      [ BrowserModule, InternationalPhoneModule ],
@@ -100,7 +103,7 @@ To install this component to an external project, follow the procedure:
     * Author: kondi0
     
     ## Mail
-    * Mail: kondi.czerwinski@gmail.com
+    * Mail: levon.hakopyan@gmail.com
     
     ## Keywords
     * Phone 
