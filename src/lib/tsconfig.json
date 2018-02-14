@@ -15,8 +15,8 @@
     "annotateForClosureCompiler": true,
     "strictMetadataEmit": true,
     "skipTemplateCodegen": true,
-    "flatModuleOutFile": "ng4-intl-phone.js",
-    "flatModuleId": "ng4-intl-phone",
+    "flatModuleOutFile": "ng4-country-phone-select.js",
+    "flatModuleId": "ng4-country-phone-select",
     "genDir": "../../out-tsc/lib-gen-dir/"
   }
 }
