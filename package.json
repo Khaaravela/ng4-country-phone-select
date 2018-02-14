@@ -1,5 +1,5 @@
 {
-    "name": "ng4-intl-phone",
+    "name": "ng4-country-phone-select",
     "version": "1.2.1",
     "description": "International phone prefix library for Angular 2 & 4",
     "main": "./ng4-intl-phone.umd.js",
