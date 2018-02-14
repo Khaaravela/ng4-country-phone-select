@@ -10,7 +10,7 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/kondi0/ng4-intl-phone.git"
+        "url": "https://github.com/Lev09/ng4-country-phone-select.git"
     },
     "engines": {
         "node": ">= 6.9.0",
