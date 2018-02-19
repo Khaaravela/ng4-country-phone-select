@@ -10,7 +10,7 @@ export class CountryService {
         this.countries = [
             {
                 name: '',
-                dialCode: '347',
+                dialCode: '374',
                 countryCode: 'am'
             },
             {

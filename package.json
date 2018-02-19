@@ -73,6 +73,7 @@
         "systemjs": "^0.19.40",
         "tslint": "^4.4.2",
         "typescript": "^2.2.1",
-        "zone.js": "^0.8.4"
+        "zone.js": "^0.8.4",
+        "angular2-text-mask": "^8.0.4"
     }
 }

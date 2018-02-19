@@ -57,6 +57,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     disabled = false;
 
     value = '';
+    mask: any[] = ['+', /[1-9]/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/,/\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/];
 
     // FILTER COUNTRIES LIST WHEN DROPDOWN IS OPEN
     @HostListener('document:keypress', ['$event'])

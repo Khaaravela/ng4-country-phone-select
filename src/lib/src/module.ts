@@ -6,6 +6,7 @@ import {OnlyNumberDirective} from "./directive/only-number.directive";
 import {CountryPipe} from "./pipe/country.pipe";
 import {CountryService} from "./service/country.service";
 import {LocaleService} from "./service/locale.service";
+import {TextMaskModule} from 'angular2-text-mask';
 
 
 
@@ -13,7 +14,8 @@ import {LocaleService} from "./service/locale.service";
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TextMaskModule
   ],
   declarations: [
     IntPhonePrefixComponent,

@@ -22,6 +22,7 @@
          [maxlength]="maxLength"
          [disabled]="disabled"
          [(ngModel)]="phoneInput"
-         (ngModelChange)="updatePhone()">
+         (ngModelChange)="updatePhone()"
+         [textMask]="{mask: mask,  guide: false, modelClean: true}">
 </div>
 
