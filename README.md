@@ -89,12 +89,12 @@ To install this component to an external project, follow the procedure:
     An ISO 639-1 language code can be provided to set available language:
      es: Spanish,
      en: English
-     
+
     ### @Input() defaultCountry
-       Enable/Disable country detection (default: true)
-    
-    ### @Input() autoDetectCountry
        An ISO 639-1 country code can be provided to set default country selected.
+        
+    ### @Input() autoDetectCountry
+       Enable/Disable country detection (default: true)
        
    ### @Input() maxLength
           maxLength (default: 15)
