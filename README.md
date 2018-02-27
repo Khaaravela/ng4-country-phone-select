@@ -8,6 +8,9 @@ This is a simple library with international phone prefix with flags images.
 
 ## Installation
 
+### Install Dependencies
+__npm install angular2-text-mask --save__
+
 To install this component to an external project, follow the procedure:
 
 1. __npm install ng4-country-phone-select --save__
@@ -88,6 +91,9 @@ To install this component to an external project, follow the procedure:
      en: English
      
     ### @Input() defaultCountry
+       Enable/Disable country detection (default: true)
+    
+    ### @Input() autoDetectCountry
        An ISO 639-1 country code can be provided to set default country selected.
        
    ### @Input() maxLength

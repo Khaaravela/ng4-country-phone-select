@@ -1,6 +1,7 @@
 import {Component, ElementRef, forwardRef, HostListener, Input, OnInit, Renderer2} from '@angular/core';
 import {Country} from '../../interface/country.interface';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
+import { Http } from '@angular/http';
 import {CountryCode} from '../../interface/country-code.interface';
 import {CountryService} from '../../service/country.service';
 import {LocaleService} from '../../service/locale.service';
@@ -36,6 +37,9 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
     defaultCountry: string;
 
     @Input()
+    autoDetectCountry: boolean = true;
+
+    @Input()
     maxLength = 15;
 
     @Input()
@@ -67,7 +71,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
         }
     }
 
-    constructor(private service: CountryService, private localeService: LocaleService, phoneComponent: ElementRef) {
+    constructor(private service: CountryService, private localeService: LocaleService, phoneComponent: ElementRef, private http: Http) {
         this.phoneComponent = phoneComponent;
     }
 
@@ -75,6 +79,7 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
         this.countries = this.service.getCountries();
         this.locales = this.localeService.getLocales(this.locale);
         this.translateCountryNames();
+        this.detectCountry();
     }
 
     setDisabledState(isDisabled: boolean): void {
@@ -102,6 +107,17 @@ export class IntPhonePrefixComponent implements OnInit, ControlValueAccessor {
 
         if (this.defaultCountry) {
             this.updatePhoneInput(this.defaultCountry);
+        }
+    }
+
+    detectCountry() {
+        if (this.autoDetectCountry) {
+            this.http.get("https://ipinfo.io").subscribe((res:any) => {
+                var response = res.json();
+                var country = response.country.toLowerCase();
+                this.defaultCountry = country;
+                this.updatePhoneInput(this.defaultCountry);
+            })
         }
     }
 

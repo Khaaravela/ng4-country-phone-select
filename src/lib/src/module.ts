@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import {IntPhonePrefixComponent} from "./component/int-phone-prefix/int-phone-prefix.component";
 import {OnlyNumberDirective} from "./directive/only-number.directive";
 import {CountryPipe} from "./pipe/country.pipe";
@@ -15,7 +16,8 @@ import {TextMaskModule} from 'angular2-text-mask';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    TextMaskModule
+    TextMaskModule,
+    HttpModule,
   ],
   declarations: [
     IntPhonePrefixComponent,
